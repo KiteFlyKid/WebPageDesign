@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background-color: #000000;
+}
+body{
+    margin: 0;
+    padding: 0;
+    position: static;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.videopage,.interestpage,.historypage,.famouspeoplepage,.contactuspage{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.interestpage,.historypage,.famouspeoplepage,.contactuspage{
+    display: none;
+}
+.videopage{
+    background: #000000;
+    margin: 0;
+}
+
+.historypage{
+    background-size: cover;
+    background: center;
+    width: 100%;
+    height: 100%;
+}
+.famouspeoplepage{
+    background: whitesmoke;
+    background: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.navA{
+    width: 150px;
+    height: 66px;
+    text-align: center;
+    margin: 4px 10px;
+    text-decoration: none;
+    font: bolder;
+    font-size: 30px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.navA:hover{
+    text-shadow: 5px 5px 15px skyblue,
+    -5px 5px 35px skyblue,
+    5px -5px 35px skyblue,
+    -5px -5px 35px skyblue;
+    text-decoration: none;
+    color: white;
+}
+.navA:active{
+    text-shadow: 1px;
+    text-shadow: skyblue;
+    text-decoration: none;
+    color: white;
+}
+.headerBar{
+    background: black;
+    opacity: 0.85;
+    z-index: 999;
+    margin: 0 auto;
+    height: 120px;
+    line-height: 60px;
+    box-shadow: 0 0 10px black;
+    display: flex;
+}
+video{
+    display: inline-block;
+    vertical-align: baseline;
+}
+img{
+    vertical-align: middle;
+}
+ul{
+    display: flex;
+    margin-left: 50px;
+}
+li{
+    margin-top: 5px;
+    height: 60px;
+    width: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+    position: relative;
+    list-style: none;
+}
+li:hover{
+    border-top: 5px solid;
+    border-top-color: skyblue;
+    margin: 0 15px;
+    list-style: none;
+}
+.headerBar>a{
+    width: 200px;
+}
+a{
+    text-decoration: none;
+}
+a:active{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.fa.fa-fw.fa-thumbs-up{
+    margin-top: 25px;
+}
+#btn1,#btn2,#btn3,#btn4,#btn5,#btn6{
+    margin: -52px 0px 0px 5px;
+}
+#bt1,#bt2,#bt3,#bt4,#bt5,#bt6{
+    margin: -52px 0px 15px 63px;
+}
+.interests{
+    display: none;
+    text-align: center;
+    padding: 10px auto;
+}
+.interests>a{
+    font-size: 100px;
+    color: white;
+    text-decoration: none;
+    margin: 0 auto;
+    width: 1000px;
+    height: 100%;
+}

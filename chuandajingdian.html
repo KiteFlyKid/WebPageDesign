@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>川大美景</title>
+  <link rel="shortcut icon" href="css/img/favicon.ico">
+  <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="js/bootstrap.js"></script>
+	
+  <style>
+    html,
+    body,
+    .container {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      flex-direction: column;
+    }
+
+    .title {
+	font-size: 38px;
+	color: #EFD52D;
+	font-style: normal;
+	font-weight: 800;
+	text-align: center;
+	width: 100%;
+	height: 10%;
+	margin-bottom: 0.2em;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+     /* height: 50px; */
+      /* background-image: url('1.jpg') */
+    }
+
+    .timeline {
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 5px 25px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .timeline .swiper-container {
+      height: 700px;
+      width: 100%;
+      position: relative;
+    }
+
+    .timeline .swiper-wrapper {
+      transition: 2s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
+    }
+
+    .timeline .swiper-slide {
+      position: relative;
+      color: #fff;
+      overflow: hidden;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    .timeline .swiper-slide::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      right: -115%;
+      bottom: -10%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      box-shadow: -230px 0 150px 60vw rgba(0, 0, 0, 0.7);
+      border-radius: 100%;
+    }
+
+    .timeline .swiper-slide-content {
+      position: absolute;
+      text-align: center;
+      width: 80%;
+      max-width: 310px;
+      right: 50%;
+      top: 13%;
+      -webkit-transform: translate(50%, 0);
+      transform: translate(50%, 0);
+      font-size: 12px;
+      z-index: 2;
+    }
+
+    .timeline .swiper-slide .timeline-year {
+      display: block;
+      font-style: italic;
+      font-size: 42px;
+      margin-bottom: 50px;
+      -webkit-transform: translate3d(20px, 0, 0);
+      transform: translate3d(20px, 0, 0);
+      color: #d4a024;
+      font-weight: 300;
+      opacity: 0;
+      transition: .2s ease .4s;
+    }
+
+    .timeline .swiper-slide .timeline-title {
+      font-weight: 800;
+      font-size: 34px;
+      margin: 0 0 30px;
+      opacity: 0;
+      -webkit-transform: translate3d(20px, 0, 0);
+      transform: translate3d(20px, 0, 0);
+      transition: .2s ease .5s;
+    }
+
+    .timeline .swiper-slide .timeline-text {
+      line-height: 1.5;
+      opacity: 0;
+      -webkit-transform: translate3d(20px, 0, 0);
+      transform: translate3d(20px, 0, 0);
+      transition: .2s ease .6s;
+		font-size: 20px;
+    }
+
+    .timeline .swiper-slide-active .timeline-year {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      transition: .4s ease 1.6s;
+    }
+
+    .timeline .swiper-slide-active .timeline-title {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      transition: .4s ease 1.7s;
+    }
+
+    .timeline .swiper-slide-active .timeline-text {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      transition: .4s ease 1.8s;
+    }
+
+    .timeline .swiper-pagination {
+      right: 15% !important;
+      height: 100%;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 18px;
+      z-index: 1;
+    }
+
+    .timeline .swiper-pagination::before {
+      content: "";
+      position: absolute;
+      left: -30px;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .timeline .swiper-pagination-bullet {
+      width: auto;
+      height: auto;
+      text-align: center;
+      opacity: 1;
+      background: transparent;
+      color: #d4a024;
+      margin: 15px 0 !important;
+      position: relative;
+    }
+
+    .timeline .swiper-pagination-bullet::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: -32.5px;
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      background-color: #d4a024;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      transition: .2s;
+    }
+
+    .timeline .swiper-pagination-bullet-active {
+      color: #d4a024;
+    }
+
+    .timeline .swiper-pagination-bullet-active::before {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+
+    .timeline .swiper-button-next,
+    .timeline .swiper-button-prev {
+      background-size: 20px 20px;
+      top: 15%;
+      width: 20px;
+      height: 20px;
+      margin-top: 0;
+      z-index: 2;
+      transition: .2s;
+    }
+
+    .timeline .swiper-button-prev {
+      left: 8%;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23d4a024'%2F%3E%3C%2Fsvg%3E");
+    }
+
+    .timeline .swiper-button-prev:hover {
+      -webkit-transform: translateX(-3px);
+      transform: translateX(-3px);
+    }
+
+    .timeline .swiper-button-next {
+      right: 8%;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23d4a024'%2F%3E%3C%2Fsvg%3E");
+    }
+
+    .timeline .swiper-button-next:hover {
+      -webkit-transform: translateX(3px);
+      transform: translateX(3px);
+    }
+
+    @media screen and (min-width: 768px) {
+      .timeline .swiper-slide::after {
+        right: -30%;
+        bottom: -8%;
+        width: 240px;
+        height: 50%;
+        box-shadow: -230px 0 150px 50vw rgba(0, 0, 0, 0.7);
+      }
+
+      .timeline .swiper-slide-content {
+        right: 30%;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 310px;
+        font-size: 11px;
+        text-align: right;
+      }
+
+      .timeline .swiper-slide .timeline-year {
+        margin-bottom: 0;
+        font-size: 32px;
+      }
+
+      .timeline .swiper-slide .timeline-title {
+        font-size: 46px;
+        margin: 0;
+      }
+
+      .timeline .swiper-pagination {
+        display: flex;
+      }
+
+      .timeline .swiper-button-prev {
+        top: 5%;
+        left: auto;
+        right: 15%;
+        -webkit-transform: rotate(90deg) translate(0, 10px);
+        transform: rotate(90deg) translate(0, 10px);
+      }
+
+      .timeline .swiper-button-prev:hover {
+        -webkit-transform: rotate(90deg) translate(-3px, 10px);
+        transform: rotate(90deg) translate(-3px, 10px);
+      }
+
+      .timeline .swiper-button-next {
+        top: auto;
+        bottom: 5%;
+        right: 15%;
+        -webkit-transform: rotate(90deg) translate(0, 10px);
+        transform: rotate(90deg) translate(0, 10px);
+      }
+
+      .timeline .swiper-button-next:hover {
+        -webkit-transform: rotate(90deg) translate(3px, 10px);
+        transform: rotate(90deg) translate(3px, 10px);
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .timeline .swiper-slide::after {
+        right: -20%;
+        bottom: -12%;
+        width: 240px;
+        height: 50%;
+        box-shadow: -230px 0 150px 39vw rgba(0, 0, 0, 0.7);
+      }
+
+      .timeline .swiper-slide-content {
+        right: 25%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js'></script>
+  <div class="container">
+    <div class="timeline">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+        
+          <div class="swiper-slide" style="background-image: url(pic/changqiao.png);"
+            data-year="长桥">
+            <div class="swiper-slide-content"><span class="timeline-year">长桥</span>
+              <p class="timeline-text">长桥，横跨江安河和明远湖上，连接着知识广场和青春广场。江安河上的白石桥，再加上明远湖畔、人工渠上那些别致的小桥，形成了江安校区的独特的“桥”文化。</p>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(pic/shuishangbaogao.png);"
+            data-year="水上报告厅">
+            <div class="swiper-slide-content"><span class="timeline-year">水上报告厅</span>
+              <p class="timeline-text">水上报告厅位于第一教学楼A座侧面，位于明远湖上方，故称水上报告厅，有近五百个座位。在报告厅北面观景廊上可以观赏湖光山色，南面镶嵌楠木雕刻的《劝学篇》，映射着百年名校的文化积淀。</p>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(pic/mingyuanhu.png);"
+            data-year="明远湖">
+            <div class="swiper-slide-content"><span class="timeline-year">明远湖</span>
+              <p class="timeline-text">明志致远—明远湖。淡泊以明志，宁静而致远，取自此诗的名字折射出了明远湖的意境—宁静、淡泊。湖水由河水和地下水汇聚而成，一阴一阳，阴阳相合，反映了一种和谐的理念和对传统文化的继承。</p>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(pic/jianganlvdao.png);"
+            data-year="江安绿道">
+            <div class="swiper-slide-content"><span class="timeline-year">江安绿道</span>
+             
+              <p class="timeline-text">江安绿道是校园内环抱明远湖的林荫小道。小道上常有三三两两行人散步聊天，伴着一路的鸟语花香，伴着明远湖的粼粼波光，你走在小路上，川大也已然走进你的心底</p>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(pic/deshui.png);"
+            data-year="德水">
+            <div class="swiper-slide-content"><span class="timeline-year">德水</span>
+              
+              <p class="timeline-text">德水作为活性的水景观是生态校园的灵魂所在。它汇入江安河，流入岷江、长江，最终奔腾入海，与学校的校训“海纳百川，有容乃大”相呼应。</p>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(pic/tushuguan.png);"
+            data-year="图书馆">
+            <div class="swiper-slide-content"><span class="timeline-year">图书馆</span>
+              
+              <p class="timeline-text">江安图书馆面积25300平方米，藏书642万册，馆藏以基础性和综合性为特色，实行以读者为中心的“藏、借、阅、咨一体化”的服务模式。</p>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(pic/jingguanshuidao.png);"
+            data-year="景观水道">
+            <div class="swiper-slide-content"><span class="timeline-year">景观水道</span>
+              
+              <p class="timeline-text">位于东门700米长的景观水道在仿古校门的掩映中若隐若现，其中的流水分9级台阶，缓慢地流入明远湖。色彩艳丽的锦鲤于水道中追逐嬉戏，颇有意境。</p>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(pic/huanxingdadao.png);"
+            data-year="环形大道">
+            <div class="swiper-slide-content"><span class="timeline-year">环形大道</span>
+              
+              <p class="timeline-text">环形大道是江安校区的主要干道之一。北段包裹着明远湖，连接着青春广场与景观水道，是风景最为优美的一段。大道两旁种植者挺拔的银杏树，北面被树林草坪所包围，南面则能欣赏明远湖景，景色引人入胜。</p>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(pic/bugaoshan.png);"
+            data-year="不高山">
+            <div class="swiper-slide-content"><span class="timeline-year">不高山</span>
+              
+              <p class="timeline-text">山不在高，有仙则名。这座山的确只是个小丘，无名地藏在川大，命名者以“不高”名之，或许正是以此寓“求学者”，要追求山的稳重，不应自高自大。
+</p>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(pic/baishiqiao.png);"
+            data-year="白石桥">
+            <div class="swiper-slide-content"><span class="timeline-year">白石桥</span>
+              
+              <p class="timeline-text">白石桥只是一座桥，但又远不止一座桥。偶然走进白石桥的桥洞，这儿刻有爱情、毕业 也刻有叛逆、纪念。游历一圈，就经历了其他人的整个青春。</p>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url(pic/yishuxueyuan.png);"
+            data-year="艺术学院">
+            <div class="swiper-slide-content"><span class="timeline-year">艺术学院</span>
+              
+              <p class="timeline-text">艺术大楼占地18.3亩，建筑面积1.4万平方米，大楼由国内著名设计家张锦秋院士设计，整体简约大方，富有艺术气质，灰色的外墙与半斜坡式草坪屋顶彰显出东方的建筑风格，深受好评。
+</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var timelineSwiper = new Swiper('.timeline .swiper-container', {
+      direction: 'vertical',
+      loop: false,
+      speed: 1600,
+      pagination: '.swiper-pagination',
+      paginationBulletRender: function (swiper, index, className) {
+        var year = document.querySelectorAll('.swiper-slide')[index].getAttribute('data-year');
+        return '<span class="' + className + '">' + year + '</span>';
+      },
+      paginationClickable: true,
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      breakpoints: {
+        768: {
+          direction: 'horizontal',
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>

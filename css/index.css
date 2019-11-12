@@ -1,0 +1,21 @@
+/* CSS Document */
+
+.opera{
+	width: 90px;
+	margin: 300px auto;
+	text-align:left;
+}
+#btn
+{
+	width: 90px;
+	height: 36px;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+}
+#btn i{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+}

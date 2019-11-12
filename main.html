@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <title>美丽川大</title>
+    <link rel="shortcut icon" href="css/img/favicon.ico">
+    <link rel="stylesheet" href="iconfont/iconfont.css" type="text/css" />
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://www.jq22.com/jquery/font-awesome.4.6.0.css">
+    <link rel="stylesheet" href="css/material-cards.css">
+    <link rel="stylesheet" href="css/cssOnFamousPeople.css" type="text/css">
+    <link rel="stylesheet" href="css/cssOnMainPage.css">
+    <link href="css/comment.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="js/jquery.material-cards.min.js"></script>
+    <script src="js/changePage.js"></script>
+    <script src="js/navDecoration.js"></script>
+    <script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+	<script src="booklet/jquery.booklet.1.1.0.js" type="text/javascript"></script>
+	<script src="cufon/ChunkFive_400.font.js" type="text/javascript"></script>
+    <script src="cufon/Note_this_400.font.js" type="text/javascript"></script>
+    
+    <!-- 这是历史页面代码 -->
+	<script type="text/javascript">
+		Cufon.replace('h1,p,.b-counter');
+
+		Cufon.replace('.book_wrapper a', {
+			hover: true
+		});
+
+		Cufon.replace('.title', {
+			textShadow: '1px 1px #C59471',
+			fontFamily: 'ChunkFive'
+		});
+
+		Cufon.replace('.reference a', {
+			textShadow: '1px 1px #C59471',
+			fontFamily: 'ChunkFive'
+		});
+
+		Cufon.replace('.loading', {
+			textShadow: '1px 1px #000',
+			fontFamily: 'ChunkFive'
+		});
+    </script>
+
+    <!-- 这是名人页面代码 -->
+    <script type="text/javascript">
+    (function ($) {
+    $.extend({
+        tipsBox: function (options) {
+            options = $.extend({
+                obj: null,  //jq对象，要在那个html标签上显示
+                str: "+1",  //字符串，要显示的内容;也可以传一段html，如: "<b style='font-family:Microsoft YaHei;'>+1</b>"
+                startSize: "15px",  //动画开始的文字大小
+                endSize: "30px",    //动画结束的文字大小
+                interval: 600,  //动画时间间隔
+                color: "red",    //文字颜色
+                callback: function () { }    //回调函数
+            }, options);
+            $("body").append("<span class='num'>" + options.str + "</span>");
+            var box = $(".num");
+            var left = options.obj.offset().left + options.obj.width() / 2;
+            var top = options.obj.offset().top - options.obj.height();
+            box.css({
+                "position": "absolute",
+                "left": left + "px",
+                "top": top + "px",
+                "z-index": 9999,
+                "font-size": options.startSize,
+                "line-height": options.endSize,
+                "color": options.color
+            });
+            box.animate({
+                "font-size": options.endSize,
+                "opacity": "0",
+                "top": top - parseInt(options.endSize) + "px"
+            }, options.interval, function () {
+                box.remove();
+                options.callback();
+            });
+        }
+    });
+})(jQuery);
+
+function copyText1() {
+    var text1 = document.getElementById("text1").innerText;
+    var input1 = document.getElementById("input1");
+    input1.value = text1; 
+    input1.select();
+    document.execCommand("copy"); 
+    alert("复制成功");
+    }
+function copyText2() {
+    var text1 = document.getElementById("text2").innerText;
+    var input1 = document.getElementById("input2");
+    input1.value = text1; 
+    input1.select();
+    document.execCommand("copy"); 
+    alert("复制成功");
+    }
+function copyText3() {
+    var text1 = document.getElementById("text3").innerText;
+    var input1 = document.getElementById("input3");
+    input1.value = text1; 
+    input1.select();
+    document.execCommand("copy"); 
+    alert("复制成功");
+    }
+function copyText4() {
+    var text1 = document.getElementById("text4").innerText;
+    var input1 = document.getElementById("input4");
+    input1.value = text1; 
+    input1.select();
+    document.execCommand("copy"); 
+    alert("复制成功");
+    }
+function copyText5() {
+    var text1 = document.getElementById("text5").innerText;
+    var input1 = document.getElementById("input5");
+    input1.value = text1; 
+    input1.select();
+    document.execCommand("copy"); 
+    alert("复制成功");
+    }
+function copyText6() {
+    var text1 = document.getElementById("text6").innerText;
+    var input1 = document.getElementById("input6");
+    input1.value = text1; 
+    input1.select();
+    document.execCommand("copy"); 
+    alert("复制成功");
+    }
+function niceIn(prop){
+    prop.find('i').addClass('niceIn');
+    setTimeout(function(){
+        prop.find('i').removeClass('niceIn');	
+    },1000);		
+}
+$(function () {
+    $("#btn1").click(function () {
+        $.tipsBox({
+            obj: $(this),
+            str: "+1",
+            callback: function () {
+            }
+        });
+        niceIn($(this));
+    });
+    
+    $("#btn22").click(function () {
+        $.tipsBox({
+            obj: $(this),
+            str: "+1",
+            callback: function () {
+            }
+        });
+        niceIn($(this));
+    });
+    
+    $("#btn33").click(function () {
+        $.tipsBox({
+            obj: $(this),
+            str: "+1",
+            callback: function () {
+            }
+        });
+        niceIn($(this));
+    });
+    
+    $("#btn4").click(function () {
+        $.tipsBox({
+            obj: $(this),
+            str: "+1",
+            callback: function () {
+            }
+        });
+        niceIn($(this));
+    });
+    
+    $("#btn5").click(function () {
+        $.tipsBox({
+            obj: $(this),
+            str: "+1",
+            callback: function () {
+            }
+        });
+        niceIn($(this));
+    });
+    $("#btn6").click(function () {
+        $.tipsBox({
+            obj: $(this),
+            str: "+1",
+            callback: function () {
+            }
+        });
+        niceIn($(this));
+    });
+});
+function click1 () {
+    location.reload();
+    }
+</script>
+<!-- 这是历史页面代码 -->
+<script type="text/javascript">
+    $(function () {
+        var $mybook = $('#mybook');
+        var $bttn_next = $('#next_page_button');
+        var $bttn_prev = $('#prev_page_button');
+        var $loading = $('#loading');
+        var $mybook_images = $mybook.find('img');
+        var cnt_images = $mybook_images.length;
+        var loaded = 0;
+        //preload all the images in the book,
+        //and then call the booklet plugin
+        $mybook_images.each(function () {
+            var $img = $(this);
+            var source = $img.attr('src');
+            $('<img/>').load(function () {
+                ++loaded;
+                if (loaded == cnt_images) {
+                    $loading.hide();
+                    $bttn_next.show();
+                    $bttn_prev.show();
+                    $mybook.show().booklet({
+                        name: null, // name of the booklet to display in the document title bar
+                        width: 800, // container width
+                        height: 500, // container height
+                        speed: 600, // speed of the transition between pages
+                        direction: 'LTR', // direction of the overall content organization, default LTR, left to right, can be RTL for languages which read right to left
+                        startingPage: 0, // index of the first page to be displayed
+                        easing: 'easeInOutQuad', // easing method for complete transition
+                        easeIn: 'easeInQuad', // easing method for first half of transition
+                        easeOut: 'easeOutQuad', // easing method for second half of transition
+                        closed: true, // start with the book "closed", will add empty pages to beginning and end of book
+                        closedFrontTitle: null, // used with "closed", "menu" and "pageSelector", determines title of blank starting page
+                        closedFrontChapter: null, // used with "closed", "menu" and "chapterSelector", determines chapter name of blank starting page
+                        closedBackTitle: null, // used with "closed", "menu" and "pageSelector", determines chapter name of blank ending page
+                        closedBackChapter: null, // used with "closed", "menu" and "chapterSelector", determines chapter name of blank ending page
+                        covers: false, // used with  "closed", makes first and last pages into covers, without page numbers (if enabled)
+                        pagePadding: 10, // padding for each page wrapper
+                        pageNumbers: true, // display page numbers on each page
+                        hovers: false, // enables preview pageturn hover animation, shows a small preview of previous or next page on hover
+                        overlays: false, // enables navigation using a page sized overlay, when enabled links inside the content will not be clickable
+                        tabs: false, // adds tabs along the top of the pages
+                        tabWidth: 60, // set the width of the tabs
+                        tabHeight: 20, // set the height of the tabs
+                        arrows: false, // adds arrows overlayed over the book edges
+                        cursor: 'pointer', // cursor css setting for side bar areas
+                        hash: false, // enables navigation using a hash string, ex: #/page/1 for page 1, will affect all booklets with 'hash' enabled
+                        keyboard: true, // enables navigation with arrow keys (left: previous, right: next)
+                        next: $bttn_next, // selector for element to use as click trigger for next page
+                        prev: $bttn_prev, // selector for element to use as click trigger for previous page
+                        menu: null, // selector for element to use as the menu area, required for 'pageSelector'
+                        pageSelector: false, // enables navigation with a dropdown menu of pages, requires 'menu'
+                        chapterSelector: false, // enables navigation with a dropdown menu of chapters, determined by the "rel" attribute, requires 'menu'
+                        shadows: true, // display shadows on page animations
+                        shadowTopFwdWidth: 166, // shadow width for top forward anim
+                        shadowTopBackWidth: 166, // shadow width for top back anim
+                        shadowBtmWidth: 50, // shadow width for bottom shadow
+                        before: function () {}, // callback invoked before each page turn animation
+                        after: function () {} // callback invoked after each page turn animation
+                    });
+                    Cufon.refresh();
+                }
+            }).attr('src', source);
+        });
+    });
+</script>
+</head>
+<body>
+<div style="top:0">
+    <div style="height: 76px; top: 0;left: 0;width: 100%;position: fixed;" class="headerBar">
+        <a class="navA"href="main.html"><img src="css/img/SCUlogo.png" style="height: 66px;width: 66px; top: 0;left: 0;"></a>
+        <ul>
+            <li id = "li1" style="border-top: 5px solid;border-top-color: skyblue;
+            margin: 0 15px;">
+            <a id="a1"class="navA"href="javascript:void(0);" rel="external nofollow" rel="external nofollow" onclick="goto1()" style="color: skyblue;">川大风景　　</a></li>
+            <li id = "li2" style="display: none;">
+            <a id="a2"class="navA" style="display: none;" href="chuandajingdian.html" rel="external nofollow" rel="external nofollow" onclick="goto2()">川大景点</a></li>
+            <li id = "li3">
+            <a id="a3"class="navA" href="javascript:void(0);" rel="external nofollow" rel="external nofollow" onclick="goto3()">　川大历史</a></li>
+            <li id = "li4">
+            <a id="a4"class="navA"href="javascript:void(0);" rel="external nofollow" rel="external nofollow" onclick="goto4()">　　川大名人</a></li>
+            <li id = "li5">
+            <a id="a5"class="navA"href="javascript:void(0);" rel="external nofollow" rel="external nofollow" onclick="goto5()">　　　联系我们</a></li>
+        </ul>
+    </div>
+
+
+
+    <div class="videopage" id="v" >
+        <video id="vi" autoplay = "autoplay" muted onended="fadein()" style="object-fit: cover; width: 100%;height: 100%;">
+            <source src="video/chuanda.MP4" type="video/mp4"/>
+            您的浏览器不支持 HTML5 video 标签。
+        </video>
+    <div class="interests" id="meijing"> <br><br><br><br>
+        <a href="chuandajingdian.html" target="_blank"> 一起领略川大的美景吧！</a>
+    </div>
+    </div>
+    <div class="interestpage" id="i" ><br><br><br><br><h1>这是风景页面</h1>
+    </div>
+    <div class="historypage" id="h"><br><br><br>
+    <div class="book_wrapper">
+        <a id="next_page_button"></a>
+        <a id="prev_page_button"></a>
+        <div id="loading" class="loading">加载中</div>
+        <div id="mybook" style="display:none;">
+            <div class="b-load">
+                <div style="width: 400px;height: 500px;">
+                    <img style="width:80% ;height : 30%" src="images/校史展览馆.png" alt="" />
+                    <h1>校史档案</h1>
+                    <p>银杏渐次呈黄的过程总是容易被人忽略，唯有木叶满地才能庄严地宣告深秋时令的悄至，锦城的秋天，是从我们的脚下展开的。水道边苍虬入云的银杏正在鲜明地燃烧，同时剧烈地扯动着校园的神经，微凉的细风携带着一股冷峻的气流，在大地上流淌，仿佛一滴浓墨入水，徐缓地绽放开来，在袅袅的墨烟中，席卷着推进，让整个水面都被染上了秋天的况味。这种况味是在别处难以捕捉的，这里，秋天来得很平静，大约是被青瓦石上的巴山夜雨融化了，或是被成都女孩轻盈的微笑淡解了，常绿一如其常态，平和地收藏了夏天的浪漫。
+                    </p>
+                    <!-- <a href="http://archives.scu.edu.cn/index.htm" target="_blank" class="article">更多信息</a> -->
+                    <!-- <a href="http://archives.scu.edu.cn/index.htm" target="_blank" class="demo">Demo</a> -->
+                </div>
+                <div>
+                    <img src="images/锦江书院.jfif" alt="" />
+                    <h1>成立之初——锦江书院</h1>
+                    <p> 康熙四十三年（1704年），四川按察使刘德芳在文翁石室原址建锦江书院，在雍正十一年（1733年）被御定为全国
+                        22家最著名的省级书院之一，有“石室云霞思古梦,锦江风雨读书灯”的美誉，为四川大学源头之一。
+                    </p>
+                    <a href="https://baike.baidu.com/item/%E9%94%A6%E6%B1%9F%E4%B9%A6%E9%99%A2/13088?fr=aladdin" target="_blank" class="article">更多信息</a>
+                    <!-- <a href="http://www.scu.edu.cn/" target="_blank" class="demo">点赞</a> -->
+                </div>
+                <div>
+                    <img src="images/尊经书院.jfif" alt="" />
+                    <h1>成立之初——尊经书院</h1>
+                    <p>创办于光绪元年（1875）的尊经书院以“通经致用”为主张，拟增设“声、光、电、化、格致之学”，
+                        领传统教育转型之先，与锦江书院同为四川大学历史源头。</p>
+                    <a href="http://www.sohu.com/a/208068316_523159" target="_blank" class="article">更多信息</a>
+                    <!-- <a href="http://www.scu.edu.cn/" target="_blank" class="demo">Demo</a> -->
+                </div>
+                <div>
+                    <img src="images/通省农业.png" alt="" />
+                    <h1>近代的发展</h1>
+                    <p>光绪三十二年（1905年）四川总督锡良责成提学使方旭和劝业道周善培在仕学馆基础上成立四川通省法政学堂。同年，四川通省农政
+                        学堂，四川工业学堂成立。“以储通才而维国学”。</p>
+                    <a href="http://baike.baidu.com/item/%E5%9B%9B%E5%B7%9D%E9%80%9A%E7%9C%81%E5%A4%A7%E5%AD%A6%E5%A0%82/5667535?fr=aladdin" target="_blank" class="article">更多信息</a>
+                    <!-- <a href="http://www.scu.edu.cn/" target="_blank" class="demo">Demo</a> -->
+                </div>
+                <div>
+                    <img src="images/国立成都高等师范学校.png" alt="" />
+                    <h1>国立成都高等师范学校（1916—1927）</h1>
+                    <p>辛亥革命后，四川省城高等学堂改名为四川官立高等学校，
+                        四川通省师范学堂改名为四川优级师范学校和四川高等师范
+                        学校。1916年，四川官立高等学校改名为国立
+                        成都高等师范学校。值得一提的是，吴玉章先生曾担任国立成都高等师范校长。</P>
+                    <a href="http://archives.scu.edu.cn/info/1001/2218.htm" target="_blank" class="article">更多信息</a>
+                    <!-- <a href="http://archives.scu.edu.cn/info/1001/2218.htm" target="_blank" class="demo">Demo</a> -->
+                </div>
+                <div>
+                        <img src="images/国立成都高等师范学校.png" alt="" />
+                        <h1>爱国园地</h1>
+                        <p>国立成都高等师范学校是四川“五四”运动和新文化运动的策源地。学校师生在四川率先发动“外争国权，内惩国贼”的反帝、反封建爱国运动，大办与《湘江评论》齐名的《星期日》等传播新思潮的进步刊物，涌现了一批学生领袖和革命先驱。</p>
+                        <a href="http://archives.scu.edu.cn/info/1001/2218.htm" target="_blank" class="article">更多信息</a>
+                        <!-- <a href="http://archives.scu.edu.cn/info/1001/2218.htm" target="_blank" class="demo">Demo</a> -->
+                </div>
+                <div>
+                    <img src="images/国立四川大学.png" alt="" />
+                    <h1>国立四川大学（1931-1949）</h1>
+                    <p style="font-size: 14px;">
+                        1931年，国立成都大学、国立成都师大、公立四川大学，三所学校合并为国立四川大学，众水归流,成为当时全国最早的13所国立大学之一，并在办学规模上位居全国前列。</p>
+                    <p style="font-size: 14px;">抗战期间，由于地处西南地区中心城市，而且地处抗战大后方，国立四川大学群贤毕至，各类学科大师云集，学术繁荣，被誉为当时的“国立十大学府”之一。
+                    </p>
+                    <a href="http://archives.scu.edu.cn/info/1001/2222.htm" target="_blank" class="article">更多信息</a>
+                    <!-- <a href="http://www.jq22.com/" target="_blank" class="demo">Demo</a> -->
+                </div>
+                <div>
+                    <img src="images/华西协和.jpg" alt="" />
+                    <h1>华西协合大学（1910—1951）</h1>
+                    <p style="font-size: 12px;">
+                        清光绪三十一年（1905年），在川的各基督教会决定联合创办一所高等学府，地址定在成都。5年后大学正式成立，定名华西协合大学。
+                        它是中国西部唯一的一所由美国、英国、加拿大三国基督教会五个差会联合创办的基督教会大学。
+                        大学的组织管理模仿牛津、剑桥的体制，实行“学舍”制，由各差会分别建筑学舍，并负责其管理。
+                        1933年更名为“私立华西协和大学”，1951年更名为“华西大学”。
+                    </p>
+                    <a href="http://archives.scu.edu.cn/info/1001/2230.htm" target="_blank" class="article">更多信息</a>
+                    <!-- <a href="http://www.jq22.com/" target="_blank" class="demo">Demo</a> -->
+                </div>
+                <div>
+                    <img src="images/爱因斯坦.jpg" alt="" />
+                    <h1>国际化的华西</h1>
+                    <p>华西协合大学文学院院长罗忠恕与爱因斯坦会晤。1947年12月中旬，罗忠恕即从墨西哥乘飞机
+                        到美国参加田纳西水坝工程。同年12月16日，美国新泽西州普林斯顿高级研究岁主任邀请罗忠恕于当日上午到研究所
+                        与世界科学巨人爱因斯坦会晤。
+                    </p>
+                    <a href="http://archives.scu.edu.cn/info/1015/2000.htm" target="_blank" class="article">更多信息</a>
+                    <!-- <a href="http://www.jq22.com/" target="_blank" class="demo">Demo</a> -->
+                </div>
+                <div>
+                    <img src="images/四川大学50.png" alt="" />
+                    <h1>四川大学（1950-1994）</h1>
+                    <p>新中国成立之初，四川大学拥有六大学院：文、理、法、工、农、师范。在50年代的院系调整中，四川大学从综合型大学转变为文理科综合大学，归教育部直属。</p>
+                    <a href="http://archives.scu.edu.cn/info/1001/2218.htm" target="_blank" class="article">更多信息</a>
+                    <!-- <a href="http://www.jq22.com/" target="_blank" class="demo">Demo</a> -->
+                </div>
+                <div>
+                    <img src="images/scu83.png" alt="" />
+                    <h1>彼时的川大</h1>
+                    <p>1978年四川大学恢复招生，学校秉承“面向现代化，面向世界，面向未来”的方针，川大抓住机遇，利用自身长期形成的优势，
+                        改革传统基础学科，新建许多国家急需的应用学科、技术学科和新兴学科，发展为包括人文科学、社会科学、管理科学、自然科学、技术科学的多学科性综合大学。
+                    </p>
+                    <a href="http://archives.scu.edu.cn/info/1001/2218.htm"target="_blank" class="article">更多信息</a>
+                    <!-- <a href="http://www.jq22.com/" target="_blank" class="demo">Demo</a> -->
+                </div>
+                <div>
+                    <img src="images/成都科技大学.png" alt="" />
+                    <h1>成都科技大学（1954—1993）</h1>
+                    <p>1978年9月，经国务院批准，成都工学院改为成都科技大学，列为全国重点大学，由中国科学院和四川省双重领导，以中国科学院为主</p>
+                    <p>1953年7月，高教部召开会议将四川大学工学院和四川化工学院于1954年合并建立成都工学院，学校的最大发展规模为10000人。</p>
+                    <a href="http://archives.scu.edu.cn/info/1001/2229.htm" target="_blank" class="article">更多信息</a>
+                    <!-- <a href="http://www.jq22.com/" target="_blank" class="demo">Demo</a> -->
+                </div>
+                <div>
+                    <img src="images/四川联合大学.png" alt="" />
+                    <h1>四川联合大学（1994—1998）</h1>
+                    <p>1994年4月，原同属国家教委的两所国家重点大学四川大学和成都科技大学，完成强强合并，成立“四川联合大学”，
+                        成为当时国内高校中专业覆盖最广、规模最大的文理渗透、理工结合的新型综合大学之一。
+                    </p>
+                    <a href="http://archives.scu.edu.cn/info/1001/2232.htm" target="_blank" class="article">更多信息</a>
+                    <!-- <a href="http://www.jq22.com/" target="_blank" class="demo">Demo</a> -->
+                </div>
+                <div>
+                    <img src="images/scu.jpg" alt="" />
+                    <h1>四川大学（1998至今）</h1>
+                    <p>1998年12月，经国家教委批准，“四川联合大学”更名为“四川大学”。</p>
+                    <p>2000年9月，原属卫生部管理的国家重点大学——华西医科大学，并入四川大学。</p>
+                    <p>985工程”和“211工程”重点建设的高水平研究型综合大学，学科覆盖了文、理、工、医、经、管、法、史、哲、农、教、艺等12个门类，有30个学科型学院及研究生院、海外教育学院等学院。</p>
+                    <a href="http://archives.scu.edu.cn/info/1001/2233.htm" target="_blank" class="article">更多信息</a>
+                    <!-- <a href="http://www.jq22.com/" target="_blank" class="demo">Demo</a> -->
+                </div>
+                    <!-- <div> 
+                            <img src="images/校史内部.png" alt="" />
+                            <h1>尾页</h1>
+                            <p></p>
+                             <a href="http://www.jq22.com/" target="_blank" class="article">更多信息</a> -->
+                    <!-- <a href="http://www.jq22.com/" target="_blank" class="demo">Demo</a> -->
+                    <!-- </div>  --> 
+            </div>
+    
+        </div>
+
+    </div>
+            <!-- <div>
+    
+                <span class="reference">
+    
+                    <a href=" http://www.jq22.com/">back to the Codrops tutorial</a>
+    
+                    <a href="http://www.jq22.com" target="_blank">booklet jQuery Plugin</a>
+    
+                </span>
+    
+            </div>  -->
+    </div>
+    <div class="famouspeoplepage" id="f"><br><br><br><br>
+        <div class="container">
+            <div class="htmleaf-container">
+            <br>
+                <section class="container">
+                    <div class="row active-with-click">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <article class="material-card Red">
+                                <h2>
+                                    <span>吴玉章</span>
+                                    <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        无产阶级革命家、教育家
+                                    </strong>
+                                </h2>
+                                <div class="mc-content">
+                                    <div class="img-container">
+                                        <img class="img-responsive" src="img/wuyuzhang.png">
+                                    </div>
+                                    <div class="mc-description">
+                                    <p id="text1">
+                                        吴玉章（1878年12月30日－1966年12月12日），原名永珊，字树人，四川荣县人；是我国杰出的无产阶级革命家、教育家、历史学家和语言文字学家、新中国高等教育的开拓者。
+                                        </p>
+                                    </div>
+                                </div>
+                                <a class="mc-btn-action">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                                <div class="mc-footer">
+                                <textarea  id="input1">
+                                </textarea>
+                                    <h4>
+                                        　　　　海纳百川　　有容乃大
+                                    </h4>
+                                    <a class="fa fa-fw fa-link" href="https://baike.baidu.com/item/%E5%90%B4%E7%8E%89%E7%AB%A0/2221?fr=aladdin"></a>
+                                    <a class="fa fa-fw fa-copy" href="javascript:void(0);" onClick="copyText1()"></a>
+                                    <a class="fa fa-fw fa-thumbs-up" id="btn1"></a>
+                                    <a class="fa fa-fw fa-undo" onClick="click1()" id="bt1"></a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <article class="material-card Pink">
+                                <h2>
+                                    <span>巴金</span>
+                                    <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        二十世纪中国文学的良心
+                                    </strong>
+                                </h2>
+                                <div class="mc-content">
+                                    <div class="img-container">
+                                        <img class="img-responsive" src="img/bajin2.png">
+                                    </div>
+                                    <div class="mc-description">
+                                    <p id="text2">
+                                        巴金（1904年11月25日—2005年10月17日），男，汉族，四川成都人，祖籍浙江嘉兴。巴金原名李尧棠，另有笔名佩竿、极乐、黑浪、春风等，字芾甘，中国作家、翻译家、社会活动家、无党派爱国民主人士。
+                                        </p>
+                                    </div>
+                                </div>
+                                <a class="mc-btn-action">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                                <div class="mc-footer">
+                                <textarea  id="input2">
+                                </textarea>
+                                    <h4>
+                                                            　　　　海纳百川　　有容乃大
+                                    </h4>
+                                    <a class="fa fa-fw fa-link" href="https://baike.baidu.com/item/%E5%B7%B4%E9%87%91"></a>
+                                    <a class="fa fa-fw fa-copy" href="javascript:void(0);" onClick="copyText2()"></a>
+                                    <a class="fa fa-fw fa-thumbs-up" id="btn22"></a>
+                                    <a class="fa fa-fw fa-undo" onClick="click1()" id="bt2"></a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <article class="material-card Purple">
+                                <h2>
+                                    <span>朱光潜</span>
+                                    <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        中国近现代美学奠基　人
+                                    </strong>
+                                </h2>
+                                <div class="mc-content">
+                                    <div class="img-container">
+                                        <img class="img-responsive" src="img/zhuguangqian.png">
+                                    </div>
+                                    <div class="mc-description">
+                                    <p id="text3">
+                                        朱光潜（1897年9月19日—1986年3月6日），字孟实，安徽省桐城县（今安徽省枞阳县）麒麟镇岱鳌村朱家老屋人。主要著作有《悲剧心理学》、《文艺心理学》、《西方美学史》、《谈美》等。
+                                        </p>
+                                    </div>
+                                </div>
+                                <a class="mc-btn-action">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                                <div class="mc-footer">
+                                <textarea  id="input3">
+                                </textarea>
+                                    <h4>
+                                                            　　　　海纳百川　　有容乃大
+                                    </h4>
+                                    <a class="fa fa-fw fa-link" href="https://baike.baidu.com/item/%E6%9C%B1%E5%85%89%E6%BD%9C"></a>
+                                    <a class="fa fa-fw fa-copy" href="javascript:void(0);" onClick="copyText3()"></a>
+                                    <a class="fa fa-fw fa-thumbs-up" id="btn33"></a>
+                                    <a class="fa fa-fw fa-undo" onClick="click1()" id="bt3"></a>
+                                </div>
+                            </article>
+                        </div>
+                    <!--</div>-->
+                    <!--<div class="row active-with-hover">-->
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <article class="material-card Deep-Purple">
+                                <h2>
+                                    <span>朱德</span>
+                                    <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        中华人民共和国元帅之一
+                                    </strong>
+                                </h2>
+                                <div class="mc-content">
+                                    <div class="img-container">
+                                        <img class="img-responsive" src="img/zhude.png">
+                                    </div>
+                                    <div class="mc-description">
+                                    <p id="text4">
+                                        朱德（1886年12月1日-1976年7月6日），字玉阶，原名朱代珍，曾用名朱建德，伟大的马克思主义者，无产阶级革命家、政治家和军事家，中国共产党、中国人民解放军和中华人民共和国的主要缔造者和领导人之一。
+                                        </p>
+                                    </div>
+                                </div>
+                                <a class="mc-btn-action">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                                <div class="mc-footer">
+                                <textarea  id="input4">
+                                </textarea>
+                                    <h4>
+                                                            　　　　海纳百川　　有容乃大
+                                    </h4>
+                                    <a class="fa fa-fw fa-link" href="https://baike.baidu.com/item/%E6%9C%B1%E5%BE%B7"></a>
+                                    <a class="fa fa-fw fa-copy" href="javascript:void(0);" onClick="copyText4()"></a>
+                                    <a class="fa fa-fw fa-thumbs-up" id="btn4"></a>
+                                    <a class="fa fa-fw fa-undo" onClick="click1()" id="bt4"></a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <article class="material-card Indigo">
+                                <h2>
+                                    <span>王小丫</span>
+                                    <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        中国内地最受欢迎主持人
+                                    </strong>
+                                </h2>
+                                <div class="mc-content">
+                                    <div class="img-container">
+                                        <img class="img-responsive" src="img/wangxiaoya.png">
+                                    </div>
+                                    <div class="mc-description">
+                                    <p id="text5">
+                                        王小丫，1968年1月22日出生于四川省昭觉县，中国内地女主持人，毕业于四川大学经济系。1998年，凭借主持的《经济半小时》获得全国经济节目优秀主持人第一名。2007年，获得中央电视台十佳节目主持人称号。</p>
+                                    </div>
+                                </div>
+                                <a class="mc-btn-action">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                                <div class="mc-footer">
+                                <textarea  id="input5">
+                                </textarea>
+                                    <h4>
+                                                                　　　　海纳百川　　有容乃大
+                                    </h4>
+                                    <a class="fa fa-fw fa-link" href="https://baike.baidu.com/item/%E7%8E%8B%E5%B0%8F%E4%B8%AB"></a>
+                                    <a class="fa fa-fw fa-copy" href="javascript:void(0);" onClick="copyText5()"></a>
+                                    <a class="fa fa-fw fa-thumbs-up" id="btn5"></a>
+                                    <a class="fa fa-fw fa-undo" onClick="click1()" id="bt5"></a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <article class="material-card Blue">
+                                <h2>
+                                    <span>郑洁</span>
+                                    <strong>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        中国著名女子网球运动员
+                                    </strong>
+                                </h2>
+                                <div class="mc-content">
+                                    <div class="img-container">
+                                        <img class="img-responsive" src="img/zhenjie.png">
+                                    </div>
+                                    <div class="mc-description">
+                                    <p id="text6">
+                                        郑洁，1983年7月5日出生于四川省成都市，1990年开始练习网球，2004年，郑洁成为中国第一位杀入大满贯16强的运动员；2006年，和晏紫搭档摘下澳网和温网的女子双打冠军。2008年北京奥运会，郑洁与晏紫搭档摘得女双的铜牌。
+                                        </p>
+                                    </div>
+                                </div>
+                                <a class="mc-btn-action">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                                <div class="mc-footer">
+                                <textarea  id="input6">
+                                </textarea>
+                                    <h4>
+                                                                　　　　海纳百川　　有容乃大
+                                    </h4>
+                                  <a class="fa fa-fw fa-link" href="https://baike.baidu.com/item/%E9%83%91%E6%B4%81/4617"></a>
+                                    <a class="fa fa-fw fa-copy" href="javascript:void(0);" onClick="copyText6()"></a>
+                                    <a class="fa fa-fw fa-thumbs-up" id="btn6"></a>
+                                    <a class="fa fa-fw fa-undo" onClick="click1()" id="bt6"></a>
+            
+                                </div>
+                            </article>
+                        </div>
+            
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="contactuspage" id="c">
+    <div class="comment1">
+    <canvas> </canvas>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>留言板</h2>
+    
+    </br>
+    <div id="board">
+        <ul id="newuls"></ul>
+    </div>
+    <div id="box">
+
+        <ul id="uls">
+            
+                <div class="username"><br><br><br>致川大
+                <p><br>我如果爱你<br>——绝不像攀援的凌霄花<br>借你的高枝炫耀自己<br>我如果爱你<br>——绝不学痴情的鸟儿<br>为绿荫重复单调的歌曲<br>也不止像泉源<br>常年送来清凉的慰藉<br>也不止像险峰<br>增加你的高度<br>衬托你的威仪
+                </p>
+                         </div>
+       <div class="username3">
+               <img src="img/quanjing.png" width="750" height="500" alt=""/> </div>
+          
+            <!-- <li>
+                <div class="username">致橡树</div>
+                <p>我如果爱你——绝不像攀援的凌霄花，借你的高枝炫耀自己；我如果爱你——绝不学痴情的鸟儿，为绿荫重复单调的歌曲；也不止像泉源，常年送来清凉的慰藉；也不止像险峰，增加你的高度，衬托你的威仪。甚至日光。甚至春雨。
+                </p>
+            </li>
+            <li>
+                <div class="username">致橡树</div>
+                <p>我如果爱你——绝不像攀援的凌霄花，借你的高枝炫耀自己；我如果爱你——绝不学痴情的鸟儿，为绿荫重复单调的歌曲；也不止像泉源，常年送来清凉的慰藉；也不止像险峰，增加你的高度，衬托你的威仪。甚至日光。甚至春雨。
+                </p>
+            </li>
+            <li>
+                <div class="username">致橡树</div>
+                <p>我如果爱你——绝不像攀援的凌霄花，借你的高枝炫耀自己；我如果爱你——绝不学痴情的鸟儿，为绿荫重复单调的歌曲；也不止像泉源，常年送来清凉的慰藉；也不止像险峰，增加你的高度，衬托你的威仪。甚至日光。甚至春雨。
+                </p>
+            </li> -->
+        </ul>
+        <div id="reset">
+            <div id="talk">言语<span id="close">&times;</span></div>
+            <div class="group"><label> 我是:　 </label> <input type="text" id="username"></div>
+            <div class="group"><label> 我想对川大说:　<br /></label><textarea style="opacity:1;" id="content"></textarea></div>
+            <input type="submit" value="确定" id="btn2">
+            <input type="submit" value="再想一想" id="btn3">
+        </div>
+        
+        <hr>
+               <div class="username2"><br><br><br><br>致川大
+                <p><br>明远湖面上<br>映照着初见你时的模样<br>环形大道旁<br>是与你邂逅的地方<br>不高山脚，白石桥边<br>慢慢走近你<br>也慢慢读懂你<br>读懂你两百多年的厚重历史
+                <br>读懂你为祖国书写的一段段传奇<br>还有你的开放与包容<br>不老与美丽
+                </p>
+    </div>
+    <div class="username4">
+               <img src="img/quanjing2.png" width="750" height="500" alt=""/> </div><a id="btn">点击留言</a>
+    </div>
+
+    <h2>联系我们</h2>
+    <hr class="linecolor">
+    <div class="aboutus">
+            <div class="img">
+                <div class="contact">  <img src="img/phone.jpg" ><p>电话：086+17306738379</p></div>
+                <div class="contact"> <img src="img/github.jpg" alt=""><a href="https://github.com/KiteFlyKid/WebPageDesign"><p>WebPageDesign</p></a></div>
+                <div class="contact">   <img src="img/email.jpg" alt=""><p>邮箱：maishang9@gmail.com</p> </div><br>
+				
+    
+ <script src="js/comment.js"></script>
+
+    </div>
+	</div>
+	<div  class="footerr1"><p><br><br><a href="chuandajingdian.html">川大风景</a>　｜　<a onclick="goto3()" href="javascript:void(0);" rel="external nofollow" rel="external nofollow" >川大历史</a>　｜　<a onclick="goto4()" href="javascript:void(0);">川大名人</a>　｜　<a onclick="goto5()" href="javascript:void(0);">联系我们</a></p></div ><div class="footerr2"><p>All　Rights　reserved.@2019-2020<br>
+           本网站设计已受版权保护，任何公司及个人不得复制，违者将依法追究责任，特此申明</p></div>
+            </div>
+	</div>
+</body>
+</html>

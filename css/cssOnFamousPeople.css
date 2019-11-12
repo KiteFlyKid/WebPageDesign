@@ -1,0 +1,115 @@
+.wrapper {
+    position: relative;
+  }
+      #btn1{
+          margin-top: -57px;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: 7px;
+  }
+  #btn22{
+      margin-top: -52px;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: 6px;
+  }
+  #btn33{
+      margin-top: -52px;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: 6px;
+  }
+  #btn4{
+      margin-top: -57px;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: 7px;
+  }
+  #btn5{
+      margin-top: -57px;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: 7px;
+  }
+  #btn6{
+  margin-top: -57px;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: 7px;
+}
+  #bt1{
+  margin-left: 65px;
+      margin-top: -57px;
+}
+  #bt2{
+  margin-left: 65px;
+      margin-top: -57px;
+}
+  #bt3{
+  margin-left: 65px;
+      margin-top: -57px;
+}
+  #bt4{
+  margin-left: 65px;
+      margin-top: -57px;
+}
+  #bt5{
+  margin-left: 65px;
+      margin-top: -57px;
+}
+  #bt6{
+  margin-left: 65px;
+      margin-top: -57px;
+}
+  textarea{
+      opacity: 0;
+  }
+  html {
+      position: relative;
+      min-height: 100%;
+  }
+
+  body {
+      background-color: #ECEFF1;
+      color: #37474F;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+  }
+
+  h1, h2, h3 {
+      font-weight: 200;
+  }
+    .title {
+    font-size: 38px;
+    color: #616161;
+    font-style: normal;
+    font-weight: 800;
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 0.2em;
+    /* height: 50px; */
+    /* background-image: url('1.jpg') */
+  }
+  .navA{
+    width: 150px;
+    height: 66px;
+    text-align: center;
+    margin: 4px 10px;
+    text-decoration: none;
+    font: bolder;
+    font-size: 30px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.navA:hover{
+    text-shadow: 5px 5px 15px skyblue,
+    -5px 5px 35px skyblue,
+    5px -5px 35px skyblue,
+    -5px -5px 35px skyblue;
+}
+.navA:active{
+    text-shadow: 1px;
+    text-shadow: skyblue;
+}

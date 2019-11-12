@@ -1,0 +1,398 @@
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.comment1 {
+			width: 100%;
+			margin: 0 auto;
+		
+			background-color: #041027;
+			background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),       transparent),
+			  radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+		  }
+
+
+
+
+
+		   h2{
+			  color: #ddd;
+			  text-align: center;
+			  font-size: 2.5em;
+			   letter-spacing:10px;
+		  }
+
+
+		
+		  canvas {
+			position: fixed;
+			width: 100%;
+			 height: 100%;
+			 z-index : -1;
+		   } 
+		  
+  		  
+		  #box a {
+			position: absolute;
+			top: 10%;
+			right: 10%;
+			color: rgba(255,255,255,0.2);
+			text-decoration: none;
+		  }
+        .linecolor{
+	          color:burlywood;
+           }
+
+
+		  a#btn{
+			  /* position: absolute; */
+			  /* top: 1em;
+			  left: 1em; */
+			  top:100px;
+			  
+		  }
+
+
+
+
+
+
+		ul,
+		li {
+			list-style: none;
+		}
+
+		#reset {
+			display: none;
+			background: #eee;
+			width: 500px;
+			height: 250px;
+			position: absolute;
+			left: 30%;
+			top: 15%;
+		}
+
+		#reset #talk {
+			width: 100%;
+			height: 35px;
+			background: #ccc;
+			text-align: center;
+			line-height: 35px;
+			font-size: 18px;
+			color: #fff;
+			font-weight: 700;
+		}
+
+		#talk #close {
+			position: absolute;
+			right: 5px;
+			top: 0;
+			font-size: 20px;
+			width: 20px;
+			height: 20px;
+			color: #999;
+			cursor: pointer;
+		}
+
+		#reset .group {
+			margin: 5px 20px;
+		}
+
+		#reset .group label {
+			color: #666;
+			font-size: 14px;
+		}
+
+		#username {
+			width: 200px;
+			height: 25px;
+			border: 1px solid #eee;
+			outline: none;
+		}
+
+		#content {
+			width: 460px;
+			height: 110px;
+			border: 1px solid #eee;
+			outline: none;
+			margin-top: 5px;
+			resize: none;
+		}
+
+		#btn2 {
+			margin-left: 200px;
+			width: 100px;
+			height: 25px;
+			border: 0;
+			border-radius: 5px;
+			background: #ddd;
+			font-size: 14px;
+			color: #666;
+			padding: 5px;
+		}
+
+		#btn3 {
+			width: 100px;
+			height: 25px;
+			border: 0;
+			border-radius: 5px;
+			background: #ddd;
+			font-size: 14px;
+			color: #666;
+			padding: 5px;
+
+		}
+
+		#box {
+	
+			margin: 0 auto;
+			margin-top: 5em;
+			width: 80%;
+			height: 1200px;
+			
+			background-size: 100% 100%;
+			border-radius: 10px;
+
+		}
+
+		#box #btn {
+			display: block;
+			width: 150px;
+			text-align: center;
+			text-decoration: none;
+			color: white;
+			font-size: 20px;
+			background: orange;
+			border-radius: 5px;
+			padding: 5px;
+			margin: 10px;
+			cursor: pointer;
+			border: 1px orange;
+		}
+
+		#uls {
+			margin: 20px 10px 0;
+			border-radius: 10px auto 0;
+		height:600px;
+		}
+
+		#uls li {
+			padding: 10px 5px;
+			/* background: #fff; */
+			border-bottom: 2px solid #eee;
+			margin-bottom: 2em;
+			
+		}
+
+		#uls .username {
+			color: #FFF;
+			padding: 2px 5px;
+			float:left;
+			width:100%;
+			height:300px;
+			text-align: left;
+		}
+
+		#uls li p {
+			padding: 10px 10px;
+			color: #aaa;
+			font-size: 14px;
+		}
+
+		.delet {
+			float: right;
+			text-decoration: none;
+			color: #ccc;
+			margin-right: 20px;
+			font-size: 20px;
+		}
+
+		.delet:hover {
+			color: red;
+		}
+
+        .banner {
+            position: relative;
+            overflow: auto;
+            text-align: center;
+        }
+
+        .banner li {
+            list-style: none;
+        }
+
+        .banner ul li {
+            float: left;
+        }
+
+        #b04 {
+			width: 640px;
+		}
+
+		#b04 .dots {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 20px;
+		}
+
+		#b04 .dots li {
+
+			display: inline-block;
+
+			width: 10px;
+
+			height: 10px;
+
+			margin: 0 4px;
+
+			text-indent: -999em;
+
+			border: 2px solid #fff;
+
+			border-radius: 6px;
+
+			cursor: pointer;
+
+			opacity: .4;
+
+			-webkit-transition: background .5s, opacity .5s;
+
+			-moz-transition: background .5s, opacity .5s;
+
+			transition: background .5s, opacity .5s;
+
+		}
+
+		#b04 .dots li.active {
+
+			background: #fff;
+
+			opacity: 1;
+
+		}
+
+		#b04 .arrow {
+			position: absolute;
+			top: 200px;
+		}
+
+		#b04 #al {
+			left: 15px;
+		}
+
+		#b04 #ar {
+			right: 15px;
+		}
+		.aboutus{
+			margin-top: -1.1em;
+			width: 100%;
+			/* height: 500px; */
+			display: flex;
+			justify-content: center;
+			background-color:gainsboro;
+		}
+		/* .briefintro{
+			width: 50%;
+			height: 100%;
+		} */
+		div.img{
+			margin: 0 auto;
+			display: flex;
+			width: 100%;
+			height: 100px;
+			background: #010b1a;
+			padding：10 auto;
+		}
+		div.contact{
+			margin: 20px auto;
+			width: 250px;
+			height:150px;
+			position: relative;
+		}
+		.img img{
+			border-radius: 30%;
+			height: 50px;
+			width: 50px;
+		}
+
+.username2 {
+	        color: #FFF;
+			padding: 2px 5px;
+			float:right;
+			width:auto;
+			height:500px;
+	text-align: right
+}
+
+.username3 {
+	float:right;
+	
+}
+
+.username4 {
+	float:left;
+	padding-top: 5px;
+}
+.contact p{
+	color: white;
+}
+#btn:hover{
+	color: white;
+	background: white;
+	border:1px white;
+	border:solid;
+}
+.footerr1 {
+	font-family:"微软雅黑";
+	font-size: 20px;
+	color: #FFFFFF;
+	background-color: #010b1a;
+   text-align: center;
+	height:150px;
+}
+
+.footerr2 {
+	text-align: center;
+	font-size: 10px;
+	background-color: #010b1a;
+	height:100%;
+	padding-bottom: 20px;
+}
+
+
+
+
+ 
+#newuls {
+	margin: 20px 10px 0;
+	border-radius: 10px auto 0;
+	
+} 
+
+ #newuls li {
+	padding: 10px 5px;
+	/* background: #fff; */
+	border-bottom: 2px solid #eee;
+	margin-bottom: 2em;
+	background-image: url(img/04.jpg);
+	width: 25%;
+	display: flex;
+} 
+
+ #newuls .username {
+	color: #FFF;
+	padding: 2px 5px;
+	/* width:100%; */
+	/* height:300px; */
+	text-align: left;
+} 
+
+ #newuls li p {
+	padding: 10px 10px;
+	color:teal;
+	font-size: 14px;
+} 
+div.board{
+	height: 200px;
+}
